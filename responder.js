@@ -11,6 +11,7 @@ const server =
       console.log(req.url)
       // Build a fake url so we can get the search parameters using a URL object
       fake_url = "https://fake.com/path" + req.url
+      console.log(fake_url)
       const url = new URL(fake_url)
       const search_params = url.searchParams
 
