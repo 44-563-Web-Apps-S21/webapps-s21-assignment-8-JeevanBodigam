@@ -19,19 +19,20 @@ const server =
 
             if (req.method === 'GET') {
 
-                console.log("Look for query parameter data: " + search_params.get("data"))
-                let params = search_params.get("data");
+                console.log("Look for query parameter data: " + search_params.get("number1"))
+                let params1 = search_params.get("number1")
+                let params2=search_params.get("number2")
 
                 // Process the queries here
                 res.statusCode = 200      //code for OK
                 res.setHeader('Content-Type', 'text/plain')
                 res.write("The Math functions I have choosen are cos(),asin() and asinh()\n")
-                res.write(`cos(${params}) is ${Math.cos(params)}\n`)
+                res.write(`<div>cos(${params1}) is ${Math.cos(params1)}</div>`)
                 // res.write(`cos(${Math.PI}) is ${Math.cos(Math.PI)}\n`)
 
-                res.write(`asin(${params}) is ${Math.asin(params)}\n`)
+                res.write(`<div>asin(${params2}) is ${Math.asin(params2)}</div>`)
                 
-                res.write(`asinh(${params}) is ${Math.asinh(params)}\n`)
+                res.write(`<div>asinh(${params1}) is ${Math.asinh(params1)}</div>`)
                 res.end();
 
             } else {
